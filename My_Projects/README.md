@@ -1,6 +1,6 @@
 # Project
 
-Hello Everyone who came here to refer my repo.
+Hello Everyone.
 I am Bhavesh Naik
 Currently Pursuing BE Electronics and Telecommunication Engineering.
 This Repository consist my projects.

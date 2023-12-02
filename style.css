@@ -1,0 +1,43 @@
+
+*{
+    background-color: bisque;
+}
+
+#heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size:xx-large;
+    text-align: center;
+    align-content: center;
+    
+
+    color: rgb(2, 43, 38);
+}
+ul{
+    margin: 5px 5px 5px 5px;
+    float: center;
+    list-style-type: square;
+    color: brown;
+}
+ul a{
+    display: block;
+    color: maroon;
+}
+#maincontent{
+    text-align: center;
+    font-size: medium;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+#result{
+    padding-right: 500px;
+    padding-bottom: 5px;
+    padding-left: 500px;
+}
+#myinp{
+    background-color: rgb(37, 51, 2);
+    color: antiquewhite;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div id="ref">
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a><i class="glyphicon glyphicon-user"></i>About Me</a></i></li>
+                <li><a>Connect</a></li>
+            </ul>
+        </nav>
+    </div>
+</head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js"></script>
+    <p id="heading">Mausam</p>
+    <div class="card">
+        <div class="search" >
+            <input type="text" id="myinp" placeholder="Enter City" spellcheck="false"><br>
+            <button type="button" id="submit"><img src=".\img\Weatherimg\search.png"></button><br>
+        </div>
+        <input type="radio" id="deg" name="Temperature" value="Degree">
+        <label for="Degree">Degree</label>
+        <input type="radio" id="fer" name="Temperature" value="Ferhenite">
+        <label for="Ferhenite">Ferhenite</label><br>
+        <div class="weather">
+            <img src=".\img\Weatherimg\rain.png" class="weather-icon">
+            <h1 class="Temperature">33°C</h1>
+            <h2 class="cityname">Goa</h2>
+            <div class="details">
+                <div class="col">
+                    <img src=".\img\Weatherimg\humidity.png">
+                    <div >
+                        <p class="humidity">
+                            50%
+                        </p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src=".\img\Weatherimg\wind.png">
+                    <div >
+                        <p class="wind">
+                            15km/h</p>
+                        <p>wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="result">
+        <label id="opcity">
+        </label>
+    </div>
+    
+</body>
+
+
+</html>

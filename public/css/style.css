@@ -2,8 +2,6 @@
 *{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
-    
-
 }
 .card{
     width: 90%;
@@ -14,12 +12,12 @@
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
-
 }
+
 .search{
     width: 100%;
     display: flex;
-    color: aqua;
+    color: rgb(1, 24, 24);
     align-items: center;
     justify-content:space-between;
 }

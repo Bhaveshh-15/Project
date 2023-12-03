@@ -1,5 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', function() {
-const apikey=`42a36296bc65f610a23d0bbe9a176983`;
+const apikey="42a36296bc65f610a23d0bbe9a176983";
 const apiUrl=`https://api.openweathermap.org/data/2.5/weather?`;
 const weathericon=document.querySelector('.weather-icon');
 const searchbox=document.querySelector(".search input");
@@ -10,6 +11,17 @@ const fer=document.getElementById("fer");
 const desc=document.getElementById("des");
 const country1=document.getElementById("Country");
 const searchbtn=document.getElementById("searchbtn");
+function convertUnixToIST(unixTime) {
+    const date = new Date(unixTime * 1000); // Convert UNIX time to milliseconds
+    const options = {
+        timeZone: 'Asia/Kolkata', // Set the timezone to Indian Standard Time
+        hour12: true,
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+    };
+    return date.toLocaleTimeString('en-US', options);
+}
     async function checkWeather(city){
         try{
             if(deg.checked){
@@ -34,8 +46,11 @@ const searchbtn=document.getElementById("searchbtn");
         document.querySelector(".wind").innerHTML=data.wind.speed;
         desc.innerHTML=data.weather[0].description;
         country1.innerHTML=data.sys.country;
-        risetime.innerHTML=data.sys.sunrise;
-        settime.innerHTML=data.sys.sunset;
+        var rise=data.sys.sunrise;
+        var set=data.sys.sunset;
+
+        risetime.innerHTML=convertUnixToIST(rise);
+        settime.innerHTML=convertUnixToIST(set);
         if(data.weather[0].main=='Clouds'){
             weathericon.src="./img/Weatherimg/clouds.png";
 

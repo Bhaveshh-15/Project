@@ -4,7 +4,11 @@ const apiUrl=`https://api.openweathermap.org/data/2.5/weather?`;
 const weathericon=document.querySelector('.weather-icon');
 const searchbox=document.querySelector(".search input");
 const deg=document.getElementById("deg");
+const risetime=document.getElementById("sunrisT");
+const settime=document.getElementById("sunsetT");
 const fer=document.getElementById("fer");
+const desc=document.getElementById("des");
+const country1=document.getElementById("Country");
 const searchbtn=document.getElementById("searchbtn");
     async function checkWeather(city){
         try{
@@ -23,10 +27,15 @@ const searchbtn=document.getElementById("searchbtn");
 
         //console.log(data)
         document.querySelector(".cityname").innerHTML=data.name;
+        console.log("Alerts",data.alert);
+        console.log(data);
         
         document.querySelector(".humidity").innerHTML=data.main.humidity;
         document.querySelector(".wind").innerHTML=data.wind.speed;
-
+        desc.innerHTML=data.weather[0].description;
+        country1.innerHTML=data.sys.country;
+        risetime.innerHTML=data.sys.sunrise;
+        settime.innerHTML=data.sys.sunset;
         if(data.weather[0].main=='Clouds'){
             weathericon.src="./img/Weatherimg/clouds.png";
 

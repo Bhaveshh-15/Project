@@ -19,6 +19,7 @@
 .search{
     width: 100%;
     display: flex;
+    color: aqua;
     align-items: center;
     justify-content:space-between;
 }
@@ -60,6 +61,10 @@
     width: 170px;
     margin-top:30px ;
 }
+#country{
+    text-align: center;
+    font-size: small;
+}
 .weather h1{
     font-size: 90px;
     font-weight: 500;
@@ -76,6 +81,13 @@
     padding: 0 20px;
     margin-top: 50px;
 }
+.suntime{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
 .col{
     display: flex;
     align-items: center;
@@ -86,8 +98,13 @@
     margin-right: 10px;
 }
 .humity,.wind{
-    font-size: 28px;
+    font-size: 30px;
     margin-top: 28px;
+}
+#windis{
+    font-size: 20px;
+    margin-top: 28px;
+
 }
 ul{
     margin: 5px 5px 5px 5px;

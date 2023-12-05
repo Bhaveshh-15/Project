@@ -12,6 +12,9 @@ const desc=document.getElementById("des");
 const country1=document.getElementById("Country");
 const searchbtn=document.getElementById("searchbtn");
 const cardback=document.getElementById("cardback");
+const tim=document.getElementById("time");
+
+
 function convertUnixToIST(unixTime) {
     const date = new Date(unixTime * 1000); // Convert UNIX time to milliseconds
     const options = {
@@ -35,8 +38,18 @@ function convertUnixToIST(unixTime) {
                 var data=await response.json();
                 document.querySelector(".Temperature").innerHTML=data.main.temp+"°F";
             }
+            else{
+
+                const response=await fetch(apiUrl+`units=metric&q=`+city+`&appid=${apikey}`);
+                var data=await response.json();
+                document.querySelector(".Temperature").innerHTML=data.main.temp+"°C";
+
+            }
             
-        
+        const timestamp = Date.now();
+        const currentDate = new Date(timestamp);
+        const time = currentDate.toLocaleString();
+        tim.innerHTML=time;
 
         //console.log(data)
         document.querySelector(".cityname").innerHTML=data.name;

@@ -11,6 +11,7 @@ const fer=document.getElementById("fer");
 const desc=document.getElementById("des");
 const country1=document.getElementById("Country");
 const searchbtn=document.getElementById("searchbtn");
+const cardback=document.getElementById("cardback");
 function convertUnixToIST(unixTime) {
     const date = new Date(unixTime * 1000); // Convert UNIX time to milliseconds
     const options = {
@@ -53,22 +54,32 @@ function convertUnixToIST(unixTime) {
         settime.innerHTML=convertUnixToIST(set);
         if(data.weather[0].main=='Clouds'){
             weathericon.src="./img/Weatherimg/clouds.png";
+            cardback.style.background="linear-gradient(180deg,rgb(39, 41, 44),rgb(1, 52, 59))";
+            cardback.style.color="rgb(231, 226, 251)";
+            
+            
 
         }
         if(data.weather[0].main=='Clear'){
             weathericon.src="./img/Weatherimg/clear.png";
+            cardback.style.background="linear-gradient(180deg,rgb(205, 221, 241),rgb(8, 209, 236))";
+            cardback.style.color="rgb(24, 14, 61)";
             
         }
         if(data.weather[0].main=='Rain'){
             weathericon.src="./img/Weatherimg/rain.png";
+            cardback.style.background="linear-gradient(180deg,rgb(14, 68, 68),rgb(70, 67, 249))";
             
         }
         if(data.weather[0].main=='Drizzle'){
             weathericon.src="./img/Weatherimg/drizzle.png";
+            cardback.style.background="linear-gradient(180deg,rgb(1, 19, 7),rgb(68, 104, 72))";
             
         }
         if(data.weather[0].main=='Mist'){
             weathericon.src="./img/Weatherimg/mist.png";
+            cardback.style.background="linear-gradient(rgb(12, 19, 7),rgb(68, 14, 72))";
+            cardback.style.color="rgb(24, 14, 61)";
             
         }
         }
@@ -77,7 +88,7 @@ function convertUnixToIST(unixTime) {
         }
         
 }
-searchbtn.addEventListener("click", async()=>{
+searchbtn.addEventListener("click" , async()=>{
     try{
         if(searchbox.value==""){
             window.alert("Insert a Proper Value");

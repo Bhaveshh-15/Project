@@ -94,7 +94,7 @@ async function giveresponse(msg,x) {
     }
 
 
-    const apiKey ="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"; //await get_API(); 
+    const apiKey =""; //await get_API(); 
     const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
     const requestOptions = {

@@ -8,3 +8,4 @@ app.set('view engine','ejs');
 app.get('/',function(req,resp){
     resp.render('pages/index');
 })
+console.log("Server Running on localhost:8000");

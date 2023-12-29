@@ -26,6 +26,7 @@ function convertUnixToIST(unixTime) {
     };
     return date.toLocaleTimeString('en-US', options);
 }
+
     async function checkWeather(city){
         try{
             if(deg.checked){
